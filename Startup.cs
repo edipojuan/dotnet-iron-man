@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using Store.Repositories;
 
 namespace dotnet
 {
@@ -14,6 +15,9 @@ namespace dotnet
     public void ConfigureServices(IServiceCollection services)
     {
       services.AddMvc();
+      services.AddResponseCompression();
+
+      services.AddTransient<ProductRepository, ProductRepository>();
     }
 
     public void Configure(IApplicationBuilder app, IHostingEnvironment env)

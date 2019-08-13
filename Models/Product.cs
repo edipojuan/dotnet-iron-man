@@ -1,6 +1,6 @@
 using System;
 
-namespace ProductCatalog.Models
+namespace Store.Models
 {
   public class Product
   {

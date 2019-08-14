@@ -8,7 +8,6 @@ namespace Store.Controllers
   [Route("v1")]
   public class HomeController : Controller
   {
-
     private readonly ProductRepository _repository;
 
     public HomeController(ProductRepository repository)

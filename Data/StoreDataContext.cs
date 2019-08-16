@@ -1,20 +1,21 @@
 using Microsoft.EntityFrameworkCore;
+using Store.Data.Maps;
 using Store.Models;
 
-namespace Store.Data
+namespace Store.Data 
 {
-  public class StoreDataContext : DbContext
+  public class StoreDataContext : DbContext 
   {
     public DbSet<Product> Products { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) 
     {
       optionsBuilder.UseInMemoryDatabase(databaseName: "TesEdipo");
     }
 
-    protected override void OnModelCreating(ModelBuilder builder)
+    protected override void OnModelCreating(ModelBuilder builder) 
     {
-
+      builder.ApplyConfiguration (new ProductMap ());
     }
   }
 }

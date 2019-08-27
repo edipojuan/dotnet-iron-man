@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Store.Repositories;
 
-namespace dotnet
+namespace DotnetIronMan
 {
   public class Startup
   {
